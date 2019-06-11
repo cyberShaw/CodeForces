@@ -1,14 +1,10 @@
 def replaceVowels(word):
-    vowels = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y']
+    vowels = ['a', 'e', 'i', 'o', 'u', 'y']
     ans = ''
     for c in word:
-        if c in vowels:
-            ans = word.replace(c,'')
-    #for c in word:
-    #   ans[c:c] = '.'
-    ans = ans.casefold()
-    return ans
+        if c not in vowels:
+            ans = ans + '.' + c            
+    return ans   
 
-
-x = input()
+x = input().lower()
 print(replaceVowels(x))
